@@ -2,12 +2,9 @@
 
 
 import { useState } from "react";
-
-
 import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
-import { IoIosArrowDown } from "react-icons/io";
 import { navItems } from "@/lib/constants/constants";
 
 export default function Navbar() {
@@ -21,33 +18,29 @@ export default function Navbar() {
     }
 
     return (
-        <div className="mx-auto flex font-bold w-full justify-between px-4 py-5">
+        <div className="mx-auto  flex font-bold w-full justify-end px-4 py-5">
             {/* left side  */}
             <section className="flex items-center gap-10">
-                {/* logo */}
                 {isSideMenuOpen && <MobileNav closeSideMenu={closeSideMenu} />}
-                <div className="hidden md:flex items-center gap-4 transition-all">
+                <div className="hidden md:flex items-center gap-8 transition-all">
                     {navItems.map((d, i) => (
                         <Link
                             key={i}
                             href={d.link ?? "#"}
-                            className="relative group  px-2 py-3 transition-all "
+                            className="relative group hover:bg-black/15  px-2 py-3  "
                         >
-                            <p className="flex cursor-pointer items-center gap-2  group-hover:text-black ">
+                            <p className="flex cursor-pointer items-center gap-2  group-hover:underline underline-offset-8 decoration-red-600 decoration-4 ">
                                 <span>{d.label}</span>
-                                {d.children && (
-                                    <IoIosArrowDown className=" rotate-180  transition-all group-hover:rotate-0" />
-                                )}
                             </p>
 
                             {/* dropdown */}
                             {d.children && (
-                                <div className="absolute   left-0  top-10 hidden w-auto  flex-col gap-1   rounded-lg bg-black py-3 shadow-md  transition-all group-hover:flex ">
+                                <div className="absolute   left-0  mt-2 hidden w-auto  flex-col gap-1   rounded-lg  ahi-theme-color py-3 shadow-md  transition-all group-hover:flex ">
                                     {d.children.map((ch, i) => (
                                         <Link
                                             key={i}
                                             href={ch.link ?? "#"}
-                                            className=" flex cursor-pointer items-center  py-1 pl-6 pr-8   hover:text-black  "
+                                            className=" flex cursor-pointer items-center hover:bg-black/40  py-1 pl-6 pr-8"
                                         >
 
                                             {/* item */}
@@ -65,7 +58,7 @@ export default function Navbar() {
             </section>
 
             {/* right side data */}
-            <section className=" hidden md:flex   items-center gap-8 ">
+            {/* <section className=" hidden md:flex   items-center gap-8 ">
                 <button className="h-fit  transition-all hover:text-black/90">
                     Login
                 </button>
@@ -73,7 +66,7 @@ export default function Navbar() {
                 <button className="h-fit rounded-xl border-2 border-neutral-400 px-4 py-2  transition-all hover:border-black hover:text-black/90">
                     Register
                 </button>
-            </section>
+            </section> */}
 
             <FiMenu
                 onClick={openSideMenu}
@@ -105,7 +98,7 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
                     ))}
                 </div>
 
-                <section className="  flex  flex-col   gap-8  mt-4 items-center">
+                {/* <section className="  flex  flex-col   gap-8  mt-4 items-center">
                     <button className="h-fit transition-all hover:text-black/90">
                         Login
                     </button>
@@ -113,7 +106,7 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
                     <button className="w-full  max-w-[200px]  rounded-xl border-2 border-neutral-400 px-4 py-2  transition-all hover:border-black hover:text-black/90">
                         Register
                     </button>
-                </section>
+                </section> */}
             </div>
         </div>
     );
@@ -138,12 +131,6 @@ function SingleNavItem(d: NavItem) {
         >
             <p className="flex cursor-pointer items-center gap-2 group-hover:text-black ">
                 <span>{d.label}</span>
-                {d.children && (
-                    // rotate-180
-                    <IoIosArrowDown
-                        className={`text-xs transition-all  ${isItemOpen && " rotate-180"}`}
-                    />
-                )}
             </p>
 
             {/* dropdown */}
@@ -155,7 +142,6 @@ function SingleNavItem(d: NavItem) {
                             href={ch.link ?? "#"}
                             className=" flex cursor-pointer items-center  py-1 pl-6 pr-8  hover:text-black  "
                         >
-                            {/* image */}
                             {/* item */}
                             <span className="whitespace-nowrap   pl-3 ">{ch.label}</span>
                         </Link>
