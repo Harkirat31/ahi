@@ -19,7 +19,7 @@ const config: Config = {
       'sm': '376px',
       // => @media (min-width: 576px) { ... }
 
-      'lmd':'576px',
+      'lmd':'650px',
 
       'md': '1024px',
       // => @media (min-width: 960px) { ... }

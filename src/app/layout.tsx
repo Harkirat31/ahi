@@ -25,13 +25,13 @@ export default function RootLayout({
           <div className="flex flex-row items-center">
           <Image className="w-10 h-10 lmd:w-16 lmd:h-16" src="/logo.png" width={60} height={60} alt="logo"/>
           <div className="pl-5 flex flex-col">
-           <h1 className="text-l lmd:text-3xl md:text-5xl font-bold"> ANDRE HVAC International Inc. </h1>
+           <h1 className="text-s lmd:text-2xl md:text-5xl font-bold"> ANDRE HVAC International Inc. </h1>
            <h2 className="text-xs lmd:text-xl md:text-2xl font-bold">VIBRATION CONTROL PRODUCTS</h2>
           </div>
           </div>
           <div>
               
-                <button className="h-fit rounded-xl border-2 font-bold border-neutral-400 px-4 py-2 bg-red-600 transition-all bol  hover:bg-red-600/55">
+                <button className="text-xs lmd:text-sm md:text-lg h-fit rounded-xl border-2 font-bold border-neutral-400 px-4 py-2 bg-red-600 transition-all bol  hover:bg-red-600/55">
                     Login/Register
                 </button>
             
