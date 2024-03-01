@@ -1,30 +1,28 @@
+import SingleProductGrid from "./single_product_grid";
+
 export default function HomeProductGrid() {
   return (
-    <div className="mt-8">
-      <div></div>
-      <div className="text-black h-[500px]  sm:h-[400px]  absolute ml-8  bg-black/20 w-3/5 flex flex-row">
+    <>
+      <div className="ml-8  bg-black/20 pb-8 h-[750px] flex flex-col overflow-scroll">
         <div className="flex flex-row mt-4">
-          <div className="w-2 h-8 lmd:w-4 lmd:h-12 bg-black ahi-theme-color"></div>
-          <p className="pl-2 text-xl lmd:text-4xl ">Introduction</p>{" "}
+          <div className="w-2 h-6 sm:w-4 sm:h-8 lg:h-10 ahi-theme-color"></div>
+          <p className="pl-2 text-lg  lg:text-2xl xl:text-4xl font-bold text-black">
+            Products
+          </p>
+        </div>
+        <div className=" mt-4 flex flex-wrap gap-1">
+          <SingleProductGrid></SingleProductGrid>
+          <SingleProductGrid></SingleProductGrid>
+          <SingleProductGrid></SingleProductGrid>
+          <SingleProductGrid></SingleProductGrid>
+          <SingleProductGrid></SingleProductGrid>
+          <SingleProductGrid></SingleProductGrid>
+          <SingleProductGrid></SingleProductGrid>
+          <SingleProductGrid></SingleProductGrid>
+          <SingleProductGrid></SingleProductGrid>
+          <SingleProductGrid></SingleProductGrid>
         </div>
       </div>
-      <div className=" absolute mt-16 lmd:mt-24 bg-black/90 w-5/6">
-        <p className="px-8 py-8 text-sm lmd:text-lg">
-          Welcome to ANDRE HVAC International (AHI), your premier trusted source
-          for cutting-edge vibration control products designed specifically for
-          commercial, industrial, construction, and heavy machinery
-          applications. With an unwavering dedication to engineering excellence,
-          we specialize in crafting high-quality solutions that effectively
-          minimize vibration, noise, and shock, ensuring the smooth and
-          efficient operation of critical systems. Backed by years of experience
-          and a commitment to innovation, our products range from advanced
-          anti-vibration mounts to precision-engineered hangers and isolators.
-          At ANDRE HVAC International, we take pride in being more than just a
-          manufacturer; we are your reliable partner in enhancing performance,
-          reducing maintenance, and creating quieter environments across the
-          commercial, industrial, construction, and heavy machinery sectors.
-        </p>
-      </div>
-    </div>
+    </>
   );
 }
