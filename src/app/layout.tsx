@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
-import Image from 'next/image'
-
-
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "ANDRE HVAC International Inc",
@@ -17,33 +15,41 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">   
+    <html lang="en">
       <body className="text-white">
-      <header className="ahi-theme-color">
-        <div className="flex flex-col pt-5 px-5">
-          <div className="flex flex-row justify-between">
-          <div className="flex flex-row items-center">
-          <Image className="w-10 h-10 lmd:w-16 lmd:h-16" src="/logo.png" width={60} height={60} alt="logo"/>
-          <div className="pl-5 flex flex-col">
-           <h1 className="text-s lmd:text-2xl md:text-5xl font-bold"> ANDRE HVAC International Inc. </h1>
-           <h2 className="text-xs lmd:text-xl md:text-2xl font-bold">VIBRATION CONTROL PRODUCTS</h2>
-          </div>
-          </div>
-          <div>
-              
-                <button className="text-xs lmd:text-sm md:text-lg h-fit rounded-xl border-2 font-bold border-neutral-400 px-4 py-2 bg-red-600 transition-all bol  hover:bg-red-600/55">
-                    Login/Register
+        <header className="ahi-theme-color">
+          <div className="flex flex-col pt-5 px-5">
+            <div className="flex flex-row justify-between">
+              <div className="flex flex-row items-center">
+                <Image
+                  className="w-10 h-10 md:w-16 md:h-16"
+                  src="/logo.png"
+                  width={60}
+                  height={60}
+                  alt="logo"
+                />
+                <div className="pl-5 flex flex-col">
+                  <h1 className="text-xs sm:text-lg md:text-2xl lg:text-4xl font-bold">
+                    {" "}
+                    ANDRE HVAC International Inc.{" "}
+                  </h1>
+                  <h2 className="text-[0.50rem] sm:text-xs  lg:text-xl font-bold">
+                    VIBRATION CONTROL PRODUCTS
+                  </h2>
+                </div>
+              </div>
+              <div>
+                <button className="text-xs md:text-sm h-fit rounded-xl border-2 font-bold border-neutral-400 px-1 py-1 md:px-4 md:py-2 bg-red-600 transition-all  hover:bg-red-600/55">
+                  Login/Register
                 </button>
-            
+              </div>
+            </div>
+            <Navbar></Navbar>
           </div>
-          </div>
-          <Navbar></Navbar>
-        </div>
         </header>
         {children}
-      <footer>Footer</footer>
+        <footer>Footer</footer>
       </body>
-      
     </html>
   );
 }

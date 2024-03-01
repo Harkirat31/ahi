@@ -32,7 +32,7 @@ export default function CategorySlider() {
             alt="category_image"
           ></Image>
           <div className="bg-black/40 ml-8">
-            <p className="text-xs lmd:text-lg md:text-2xl px-5 py-3 font-bold">
+            <p className="text-xs sm:text-lg md:text-2xl px-5 py-3 font-bold">
               {categorydate.name}
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function CategorySlider() {
             alt="category_image"
           ></Image>
           <div className="bg-black/40 ml-8">
-            <p className="text-xs lmd:text-lg md:text-2xl px-5 py-3 font-bold">
+            <p className="text-xs md:text-lg lg:text-2xl px-5 py-3 font-bold">
               {categorydate.name}
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function CategorySlider() {
             alt="category_image"
           ></Image>
           <div className="bg-black/40 w-96 ml-8">
-            <p className="text-xs lmd:text-lg md:text-2xl px-5 py-3 font-bold">
+            <p className="text-xs  md:text-xl lg:text-2xl px-5 py-3 font-bold">
               {categorydate.name}
             </p>
           </div>

@@ -54,17 +54,6 @@ export default function Navbar() {
         {/* navitems */}
       </section>
 
-      {/* right side data */}
-      {/* <section className=" hidden md:flex   items-center gap-8 ">
-                <button className="h-fit  transition-all hover:text-black/90">
-                    Login
-                </button>
-
-                <button className="h-fit rounded-xl border-2 border-neutral-400 px-4 py-2  transition-all hover:border-black hover:text-black/90">
-                    Register
-                </button>
-            </section> */}
-
       <FiMenu
         onClick={openSideMenu}
         className="cursor-pointer text-4xl md:hidden"
@@ -90,16 +79,6 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
             </SingleNavItem>
           ))}
         </div>
-
-        {/* <section className="  flex  flex-col   gap-8  mt-4 items-center">
-                    <button className="h-fit transition-all hover:text-black/90">
-                        Login
-                    </button>
-
-                    <button className="w-full  max-w-[200px]  rounded-xl border-2 border-neutral-400 px-4 py-2  transition-all hover:border-black hover:text-black/90">
-                        Register
-                    </button>
-                </section> */}
       </div>
     </div>
   );

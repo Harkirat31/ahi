@@ -10,12 +10,8 @@ const home = () => {
           <CategorySlider></CategorySlider>
         </div>
       </div>
-      <div className="h-[600px]  sm:h-[500px]">
-        <HomeIntro></HomeIntro>
-      </div>
-      <div>
-        <HomeProductGrid></HomeProductGrid>
-      </div>
+
+      <HomeIntro></HomeIntro>
     </div>
   );
 };
