@@ -24,7 +24,20 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
   .ahi-theme-color {
     background-color: #050580;
   }
+
+  .ahi-pl {
+    padding-left: 2rem;
+  }
+
+  .ahi-pr {
+    padding-right: 2rem;
+  }
+}
+
+.add-10px-height {
+  height: calc(100% + 6vw);
 }

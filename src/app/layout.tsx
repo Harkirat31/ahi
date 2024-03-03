@@ -19,32 +19,37 @@ export default function RootLayout({
       <body className="text-white">
         <header className="ahi-theme-color">
           <div className="flex flex-col pt-5 px-5">
-            <div className="flex flex-row justify-between">
-              <div className="flex flex-row items-center">
+            <div className="flex flex-row items-center justify-between">
+              <div className="flex flex-row  w-4/5 items-center">
                 <Image
-                  className="w-10 h-10 md:w-16 md:h-16"
+                  className="w-[10%] sm:w-1/12"
                   src="/logo.png"
-                  width={60}
-                  height={60}
+                  width={240}
+                  height={240}
                   alt="logo"
                 />
-                <div className="pl-5 flex flex-col">
-                  <h1 className="text-xs sm:text-lg md:text-2xl lg:text-4xl font-bold">
+                <div className="pl-[1.25%] flex flex-col">
+                  <h1 className="text-[3.5vw] sm:text-[3vw]  font-bold">
                     {" "}
                     ANDRE HVAC International Inc.{" "}
                   </h1>
-                  <h2 className="text-[0.50rem] sm:text-xs  lg:text-xl font-bold">
+                  <h2 className="text-[1.75vw] sm:text-[1.5vw]  font-bold">
                     VIBRATION CONTROL PRODUCTS
                   </h2>
                 </div>
               </div>
-              <div>
-                <button className="text-xs md:text-sm h-fit rounded-xl border-2 font-bold border-neutral-400 px-1 py-1 md:px-4 md:py-2 bg-red-600 transition-all  hover:bg-red-600/55">
-                  Login/Register
+              <div className="flex flex-row justify-end items-center">
+                <button className="whitespace-nowrap text-center text-[2.5vw] sm:text-lg  px-2 py-1 sm:4 h-fit rounded-lg border-2 font-bold border-neutral-400  bg-red-600 transition-all  hover:bg-red-600/55">
+                  Login
                 </button>
+                <div className="md:hidden">
+                  <Navbar></Navbar>
+                </div>
               </div>
             </div>
-            <Navbar></Navbar>
+            <div className="hidden md:block">
+              <Navbar></Navbar>
+            </div>
           </div>
         </header>
         {children}
