@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="text-white">
         <header className="ahi-theme-color">
-          <div className="flex flex-col pt-5 px-5">
+          <div className="flex flex-col  py-2 px-2 sm:px-5">
             <div className="flex flex-row items-center justify-between">
               <div className="flex flex-row  w-4/5 items-center">
                 <Image
@@ -39,10 +39,10 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="flex flex-row justify-end items-center">
-                <button className="whitespace-nowrap text-center text-[2.5vw] sm:text-lg  px-2 py-1 sm:4 h-fit rounded-lg border-2 font-bold border-neutral-400  bg-red-600 transition-all  hover:bg-red-600/55">
+                <button className="whitespace-nowrap text-center text-[2vw] sm:text-[1.5vw]  px-2 py-1  h-fit rounded-lg border-2 font-bold border-neutral-400  bg-red-600 transition-all  hover:bg-red-600/55">
                   Login
                 </button>
-                <div className="md:hidden">
+                <div className="md:hidden py-0">
                   <Navbar></Navbar>
                 </div>
               </div>

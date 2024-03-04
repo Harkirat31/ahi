@@ -1,16 +1,16 @@
 export default function HomeIntro() {
   return (
-    <div className="mt-8">
-      <div className="relative w-4/5 mt-10 mb-32 ">
+    <div className="mt-[1vw]">
+      <div className="relative w-4/5  mb-32 ">
         <div className="add-10px-height w-4/5 -top-[1vw] absolute ml-8  bg-black/5  flex flex-col justify-start">
         </div>
         <div className=" text-black ahi-pl mb-[1vw] flex flex-row items-center mt-4 ">
-          <div className="w-2 h-8 sm:h-10 bg-black ahi-theme-color"></div>
-          <p className="pl-[0.5%] text-2xl sm:text-3xl font-bold">
+          <div className="w-[1vw] h-[3.5vw] sm:h-[3.5vw] bg-black ahi-theme-color"></div>
+          <p className="pl-[0.5%] text-[3.5vw] sm:text-[3vw] font-bold">
             Introduction
           </p>{" "}
         </div>
-        <p className="bg-black/80 ahi-pl py-[1%] text-sm sm:text-lg">
+        <p className="bg-black/80 ahi-pl py-[1%] text-[1.75vw] sm:text-[1.25vw] font-bold">
           Welcome to ANDRE HVAC International (AHI), your premier trusted source
           for cutting-edge vibration control products designed specifically for
           commercial, industrial, construction, and heavy machinery

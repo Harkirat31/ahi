@@ -6,7 +6,7 @@ import Image from "next/image";
 const home = () => {
   return (
     <div className="flex flex-col w-full">
-      <div className="bg-cover h-96  bg-[url('/dummy/bg5.jpg')] ">
+      <div className="bg-cover h-[25vw] bg-[url('/dummy/bg5.jpg')] ">
         <div className="flex flex-col justify-center h-full px-20">
           <CategorySlider></CategorySlider>
         </div>

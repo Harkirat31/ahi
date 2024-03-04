@@ -16,16 +16,16 @@ export default function Navbar() {
   }
 
   return (
-    <div className="mx-auto  flex font-bold w-full justify-end px-4 py-5">
+    <div className="mx-auto  flex font-bold w-full justify-end px-1  py-2">
       {/* left side  */}
       <section className="flex items-center gap-10">
         {isSideMenuOpen && <MobileNav closeSideMenu={closeSideMenu} />}
-        <div className="hidden md:flex items-center gap-8 transition-all">
+        <div className="hidden md:flex items-center gap-[2vw] transition-all text-[1.75vw] sm:text-[1.25vw]">
           {navItems.map((d, i) => (
             <Link
               key={i}
               href={d.link ?? "#"}
-              className="relative group hover:bg-black/15  px-2 py-3  "
+              className="relative group hover:bg-black/15  px-2 py-2  "
             >
               <p className="flex cursor-pointer items-center gap-2  group-hover:underline underline-offset-8 decoration-red-600 decoration-4 ">
                 <span>{d.label}</span>
@@ -56,7 +56,7 @@ export default function Navbar() {
 
       <FiMenu
         onClick={openSideMenu}
-        className="cursor-pointer text-4xl md:hidden"
+        className="cursor-pointer text-2xl sm:text-3xl md:hidden"
       />
     </div>
   );

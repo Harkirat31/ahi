@@ -13,63 +13,39 @@ const categorydate = {
 
 export default function CategorySlider() {
   var settings = {
+    autoplay: true,
     dots: true,
-    infinite: false,
-    speed: 500,
+    infinite: true,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
   };
   return (
-    <Slider className="" {...settings}>
-      <div className="h-full">
-        <div className="flex flex-row justify-center items-center">
-          <Image
-            className="h-40 w-20 md:h-60 md:w-32"
-            width={500}
-            height={250}
-            src={categorydate.image_url}
-            alt="category_image"
-          ></Image>
-          <div className="bg-black/40 ml-8">
-            <p className="text-xs sm:text-lg md:text-2xl px-5 py-3 font-bold">
-              {categorydate.name}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="h-full">
-        <div className="flex flex-row justify-center items-center">
-          <Image
-            className="h-40 w-20 md:h-60 md:w-32"
-            width={500}
-            height={250}
-            src={categorydate.image_url}
-            alt="category_image"
-          ></Image>
-          <div className="bg-black/40 ml-8">
-            <p className="text-xs md:text-lg lg:text-2xl px-5 py-3 font-bold">
-              {categorydate.name}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="h-full">
-        <div className="flex flex-row justify-center items-center">
-          <Image
-            className="h-40 w-20 md:h-60 md:w-32"
-            width={500}
-            height={250}
-            src={categorydate.image_url}
-            alt="category_image"
-          ></Image>
-          <div className="bg-black/40 w-96 ml-8">
-            <p className="text-xs  md:text-xl lg:text-2xl px-5 py-3 font-bold">
-              {categorydate.name}
-            </p>
-          </div>
-        </div>
-      </div>
+    <Slider {...settings}  >
+      <SliderItem></SliderItem>
+      <SliderItem></SliderItem>
+      <SliderItem></SliderItem>
     </Slider>
   );
+}
+
+
+const SliderItem = () => {
+  return <div className="h-full">
+    <div className="flex flex-row justify-center items-center">
+      <Image
+        className="h-[20vw] w-[10vw]"
+        width={500}
+        height={250}
+        src={categorydate.image_url}
+        alt="category_image"
+      ></Image>
+      <div className="bg-black/40 ml-8">
+        <p className="text-[1.75vw] sm:text-[1.25vw]  px-5 py-1 sm:py-3 font-bold">
+          {categorydate.name}
+        </p>
+      </div>
+    </div>
+  </div>
 }
